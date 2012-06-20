@@ -1,0 +1,23 @@
+Download
+
+
+Ray Releases are distributed on SourceForge (Geeknet, Inc.): <a href="http://sourceforge.net/projects/denovoassembler/files/">Ray Releases</a>
+
+<br />
+<br />
+
+<b>Development</b>
+
+The Ray development repositories are hosted on github (GitHub, Inc.):
+
+<ul>
+
+<li>
+<a href="https://github.com/sebhtml/ray">ray</a>
+</li>
+
+<li>
+<a href="https://github.com/sebhtml/RayPlatform">RayPlatform</a>
+</li>
+
+</ul>

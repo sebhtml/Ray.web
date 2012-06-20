@@ -1,0 +1,20 @@
+Ray -- Parallel genome assemblies for parallel DNA sequencing
+
+<p>
+Ray is a parallel software that computes <i>de novo</i> genome assemblies with next-generation sequencing data.
+</p>
+
+<p>Ray is written in C++ and can run in parallel on numerous interconnected computers using the <a href="http://mpi-forum.org">message-passing interface (MPI) standard</a>.
+
+</p>
+
+<p>
+Ray is written by <a href="http://boisvert.info">Sébastien Boisvert</a>, a PhD student supervised by <a href="http://genome.ulaval.ca/corbeillab">Jacques Corbeil</a>
+ and François Laviolette at <a href="http://ulaval.ca">Université Laval</a>, in Québec, Canada.
+
+
+
+</p>
+
+<p>
+
