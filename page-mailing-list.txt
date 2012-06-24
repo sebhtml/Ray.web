@@ -3,7 +3,8 @@ Mailing list
 
 <ul>
 <li><a href="http://lists.sourceforge.net/lists/listinfo/denovoassembler-users">Subscribe</li>
-<li><a href="http://sourceforge.net/mailarchive/forum.php?forum_name=denovoassembler-users">Browse the archives</a></li>
+<li><a href="http://sourceforge.net/mailarchive/forum.php?forum_name=denovoassembler-users">Browse the archives on SourceForge</a></li>
+<li><a href="http://blog.gmane.org/gmane.science.biology.ray-genome-assembler">Browse the archives on Gmane</a></li>
 <li>
 <a href="http://seqanswers.com/forums/showthread.php?t=4301">View the SEQanswers thread</a></li>
 </ul>

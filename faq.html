@@ -1,0 +1,224 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>
+Frequently asked questions
+
+</title>
+
+<link href="style.css" rel="stylesheet" type="text/css">
+</link>
+
+<script language="javascript" type="text/javascript" src="source.js">
+</script>
+
+</head>
+
+<body>
+
+
+<center>
+<table width="800"><tr><td>
+
+<table><tr><td 
+> 
+<a href="index.html"><img src="ray.png" border="0"></a></td>
+<td>
+<div 
+class="menuItem_onmouseout"
+onmouseover="setMouseOver(this);"
+onmouseout="setMouseOut(this);"
+onclick="style.backgroundColor='#85ff85';window.location.href='download.html'"
+
+><a class="menuLink" href="download.html">Download</a>
+</div></td>
+
+
+<td><div
+class="menuItem_onmouseout"
+onmouseover="setMouseOver(this);"
+onmouseout="setMouseOut(this);"
+onclick="style.backgroundColor='#85ff85';window.location.href='faq.html'"
+><a class="menuLink" href="faq.html">Frequently asked questions</a></div></td>
+
+
+
+
+<td><div
+
+class="menuItem_onmouseout"
+onmouseover="setMouseOver(this);"
+onmouseout="setMouseOut(this);"
+onclick="style.backgroundColor='#85ff85';window.location.href='publications.html'"
+><a class="menuLink" href="publications.html">Publications</a></div></td>
+<td><div
+
+class="menuItem_onmouseout"
+onmouseover="setMouseOver(this);"
+onmouseout="setMouseOut(this);"
+onclick="style.backgroundColor='#85ff85';window.location.href='mailing-list.html'"
+><a class="menuLink" href="mailing-list.html">Mailing list</a></div></td>
+<td><div
+
+class="menuItem_onmouseout"
+onmouseover="setMouseOver(this);"
+onmouseout="setMouseOut(this);"
+onclick="style.backgroundColor='#85ff85';window.location.href='manual.html'"
+><a  class="menuLink" href="manual.html">User's manual</a></div></td>
+<td><div
+class="menuItem_onmouseout"
+onmouseover="setMouseOver(this);"
+onmouseout="setMouseOut(this);"
+onclick="style.backgroundColor='#85ff85';window.location.href='acknowledgments.html'"
+><a class="menuLink" href="acknowledgments.html">Acknowledgments</a></div></td>
+
+<td><div
+class="menuItem_onmouseout"
+onmouseover="setMouseOver(this);"
+onmouseout="setMouseOut(this);"
+onclick="style.backgroundColor='#85ff85';window.location.href='wiki.html'"
+><a class="menuLink" href="wiki.html">Wiki</a></div></td>
+
+
+</tr>
+</table>
+</td></tr>
+<tr><td width="800">
+<br />
+<h1>Frequently asked questions
+</h1><br />
+<h1>Documentation & support</h1>
+
+<b>How can I learn more about Ray ?</b>
+<br />
+Ray is documented in Documentation/ directory of the distribution.
+You can also check the Publications page.
+<br /><br />
+
+<b>How can I get help regarding my Ray usage ?</b>
+<br />
+The best way to get support is to send an email on
+the mailing list.
+<br /><br />
+
+
+<h1>Running jobs</h1>
+
+
+<b>What types of analyses are possible with Ray ?</b>
+<br />
+These are supported and tested:
+<i>de novo</i> assembly of single genomes and
+<i>de novo</i> assembly of metagenomes.
+Transcriptome <i>de novo</i> assembly is also
+possible although this is not tested.
+<br />
+<br />
+
+<b>Can I run Ray on a single processor core ?</b>
+<br />
+
+Yes. The single Ray process will send messages to itself.
+<br />
+<br />
+
+<b>What is latency and how do I read RayOutput/NetworkTest.txt</b>
+<br />
+
+The latency, measured in microseconds, is the time required to receive
+a response to a message sent onto the network.
+<br />
+<br />
+
+
+<b>Can I export my assembly in the AMOS format ?</b>
+<br />
+Yes. You can export your assembly in this format with the -amos option.
+
+<br />
+<br />
+
+<b>Can I save the progress of my Ray jobs and resume them ?</b>
+<br />
+Yes, it can be done witht the option -read-write-checkpoints CheckpointDirectory.
+<br />
+<br />
+
+<b>What is the maximum number processor cores that I can use (mpiexec -n N) ?</b>
+<br />
+Without software message routing (the default), the theoretical maximum 
+is 100000 cores. With
+software message routing, the maximum is 4096 at the moment.
+<br />
+<br />
+
+<h1>Running large jobs</h1>
+<b>Is there special options for running large jobs ?</b>
+<br />
+Message routing should be enable for large jobs to lower the latency.
+See Documentation/ to learn more.
+<br /><br />
+
+<h1>Cloud computing</h1>
+
+<b>Can I run Ray in the cloud, like on Amazon Elastic Compute Cloud (EC2) ?</b>
+<br />
+Yes, this is possible and tested.
+The best way is to create your cluster with MIT
+StarCluster and then to launch Ray. This 
+<a href="http://omicsomics.blogspot.ca/2012/06/out-damned-spot-instance-out-i-say.html">
+blog post</a>
+is about that.
+
+<br />
+<br />
+
+<h1>Data</h1>
+
+<b>Where can I get public sequence data to test Ray ?</b>
+<br />
+The European Read Archive is a good start.
+<br /><br />
+
+
+<b>Can I use paired reads with Ray ?</b>
+<br />
+Yes. Paired reads are supported using -p file1.fastq file2.fastq.
+<br />
+<br />
+
+<b>Can I use jumping libraries or fosmid libraries with Ray ?</b>
+<br />
+
+Yes, you can do that. Strands must be like <----- -----> or 
+-----> <-----.
+<br />
+
+
+<h1>Legal stuff</h1>
+
+<b>With which license Ray is distributed ?</b>
+<br />
+Ray is licensed with the GNU General Public License, version 3 (GPLv3).
+RayPlatform is licensed with the GNU Lesser General Public License, version 3 (LGPLv3).
+
+<br />
+<br />
+
+
+
+<br />
+<br />
+<br />
+</td></tr>
+<tr><td>
+<small>
+<br />
+    Ray is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, <a href="http://www.gnu.org/licenses/gpl.html">version 3 of the License</a>.
+</small>
+</table>
+</center>
+</body>
+</html>

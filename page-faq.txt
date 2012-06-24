@@ -1,0 +1,121 @@
+Frequently asked questions
+
+<h1>Documentation & support</h1>
+
+<b>How can I learn more about Ray ?</b>
+<br />
+Ray is documented in Documentation/ directory of the distribution.
+You can also check the Publications page.
+<br /><br />
+
+<b>How can I get help regarding my Ray usage ?</b>
+<br />
+The best way to get support is to send an email on
+the mailing list.
+<br /><br />
+
+
+<h1>Running jobs</h1>
+
+
+<b>What types of analyses are possible with Ray ?</b>
+<br />
+These are supported and tested:
+<i>de novo</i> assembly of single genomes and
+<i>de novo</i> assembly of metagenomes.
+Transcriptome <i>de novo</i> assembly is also
+possible although this is not tested.
+<br />
+<br />
+
+<b>Can I run Ray on a single processor core ?</b>
+<br />
+
+Yes. The single Ray process will send messages to itself.
+<br />
+<br />
+
+<b>What is latency and how do I read RayOutput/NetworkTest.txt</b>
+<br />
+
+The latency, measured in microseconds, is the time required to receive
+a response to a message sent onto the network.
+<br />
+<br />
+
+
+<b>Can I export my assembly in the AMOS format ?</b>
+<br />
+Yes. You can export your assembly in this format with the -amos option.
+
+<br />
+<br />
+
+<b>Can I save the progress of my Ray jobs and resume them ?</b>
+<br />
+Yes, it can be done witht the option -read-write-checkpoints CheckpointDirectory.
+<br />
+<br />
+
+<b>What is the maximum number processor cores that I can use (mpiexec -n N) ?</b>
+<br />
+Without software message routing (the default), the theoretical maximum 
+is 100000 cores. With
+software message routing, the maximum is 4096 at the moment.
+<br />
+<br />
+
+<h1>Running large jobs</h1>
+<b>Is there special options for running large jobs ?</b>
+<br />
+Message routing should be enable for large jobs to lower the latency.
+See Documentation/ to learn more.
+<br /><br />
+
+<h1>Cloud computing</h1>
+
+<b>Can I run Ray in the cloud, like on Amazon Elastic Compute Cloud (EC2) ?</b>
+<br />
+Yes, this is possible and tested.
+The best way is to create your cluster with MIT
+StarCluster and then to launch Ray. This 
+<a href="http://omicsomics.blogspot.ca/2012/06/out-damned-spot-instance-out-i-say.html">
+blog post</a>
+is about that.
+
+<br />
+<br />
+
+<h1>Data</h1>
+
+<b>Where can I get public sequence data to test Ray ?</b>
+<br />
+The European Read Archive is a good start.
+<br /><br />
+
+
+<b>Can I use paired reads with Ray ?</b>
+<br />
+Yes. Paired reads are supported using -p file1.fastq file2.fastq.
+<br />
+<br />
+
+<b>Can I use jumping libraries or fosmid libraries with Ray ?</b>
+<br />
+
+Yes, you can do that. Strands must be like <----- -----> or 
+-----> <-----.
+<br />
+
+
+<h1>Legal stuff</h1>
+
+<b>With which license Ray is distributed ?</b>
+<br />
+Ray is licensed with the GNU General Public License, version 3 (GPLv3).
+RayPlatform is licensed with the GNU Lesser General Public License, version 3 (LGPLv3).
+
+<br />
+<br />
+
+
