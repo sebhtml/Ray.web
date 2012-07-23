@@ -1,34 +1,54 @@
 body {
 color: #333333;
 font-family: Verdana, Geneva, sans-serif;
+font-size: 12pt;
 }
 
-.menuItem_onmouseout{
+
+a{
+	color: #eb1b29;
+}
+
+.menuItem{
 cursor: pointer;
-padding: 0.2cm;
+padding: 10px;
 border-style: solid;
 border-width: 2px;
-background-color: #f4ff45;
+background-color: #40b441;
 border-color: #333333;
+border-radius: 25px;
+height: 60px;
+display: table; 
+color: white;
 }
 
-.menuItem_onmouseover{
-cursor: pointer;
-padding: 0.2cm;
-border-style: solid;
-border-width: 2px;
+.menuItem:hover{
 background-color: #ffffff;
-border-color: #333333;
+color: #40b441;
+}
+
+#important:hover{
+cursor: default;
+background-color: #40b441;
+color: white;
+}
+
+.BrandNew:after{
+content: " New!";
+color: #ffef22;
+font-variant: small-caps;
+font-size: 12pt;
+font-weight: bold;
 }
 
 .menuLink{
 text-decoration: none;
-color: #333333;
 display: block;
 width: 100%;
+display: table-cell; 
+vertical-align: middle
 }
 
-a{
-	color: #be1d1b;
-}
+
+
 

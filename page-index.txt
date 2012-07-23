@@ -1,5 +1,16 @@
 Ray -- Parallel genome assemblies for parallel DNA sequencing
 
+<div class="menuItem" id="important">
+
+Included:
+<ul>
+<li><strong>Ray</strong> <i>de novo</i> assembly of single genomes</li>
+<li class="BrandNew"><strong>Ray<sub>Méta</sub></strong>  <i>de novo</i> assembly of metagenomes</li>
+<li class="BrandNew"><strong>Ray<sub>Communities</sub></strong>  microbe abundance + taxonomic profiling</li>
+<li class="BrandNew"><strong>Ray<sub>Ontologies</sub></strong>  gene ontology profiling</li>
+</ul>
+
+</div>
 <p>
 Ray is a parallel software that computes <i>de novo</i> genome assemblies with next-generation sequencing data.
 </p>
