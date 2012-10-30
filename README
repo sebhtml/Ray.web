@@ -1,3 +1,8 @@
-run generate-web-site.sh
+To add or modify page, edit page-*.txt files
+
+then run generate-web-site.sh
+
+To upload to the web server:
 
 see https://sourceforge.net/apps/trac/sourceforge/wiki/Project%20web
+
