@@ -1,3 +1,5 @@
+#!/bin/bash
+
 for page in $(ls page-*)
 do
 	key=$(echo $page|sed 's/page\-//g'|sed 's/.txt//g')
