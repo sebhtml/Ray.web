@@ -2,6 +2,11 @@ Frequently asked questions
 
 <h1>Documentation & support</h1>
 
+<b>What is the best way to get support ?</b>
+<br />
+The best way to get support is to use the users mailing list.
+<br /><br />
+
 <b>How can I learn more about Ray ?</b>
 <br />
 Ray is documented in Documentation/ directory of the distribution.
@@ -10,13 +15,40 @@ You can also check the Publications page.
 
 <b>How can I get help regarding my Ray usage ?</b>
 <br />
-The best way to get support is to send an email on
+You can send an email on
 the mailing list.
 <br /><br />
+
+<h1>Installation</h1>
+
+<b>What are the dependencies of Ray ?</b>
+<br />
+A C++ compiler that supports at least C++ 1998 (like GNU g++) and a MPI library that supports at least
+MPI 1.0 (like Open-MPI or MPICH2).
+<br /><br />
+
 
 
 <h1>Running jobs</h1>
 
+<b>Can I run Ray on many machines with MPI ?</b>
+<br />
+Yes.
+<br /><br />
+
+<b>Can I run Ray on a single processor core ?</b>
+<br />
+
+Yes. The single Ray process will send messages to itself.
+<br />
+<br />
+
+
+<b>Can I assemble metagenomes with Ray ?</b>
+<br />
+Yes. Ray can do de novo metagenome assemblies (Ray Meta), and taxonomic
+profiling too based on k-mer coloring (Ray Communities), among other things.
+<br /><br />
 
 <b>What types of analyses are possible with Ray ?</b>
 <br />
@@ -28,12 +60,6 @@ possible although this is not tested.
 <br />
 <br />
 
-<b>Can I run Ray on a single processor core ?</b>
-<br />
-
-Yes. The single Ray process will send messages to itself.
-<br />
-<br />
 
 <b>What is latency and how do I read RayOutput/NetworkTest.txt</b>
 <br />
@@ -59,20 +85,17 @@ Yes, it can be done witht the option -read-write-checkpoints CheckpointDirectory
 
 <b>What is the maximum number processor cores that I can use (mpiexec -n N) ?</b>
 <br />
-Without software message routing (the default), the theoretical maximum 
-is 100000 cores. With
-software message routing, the maximum is 4096 at the moment.
-<br />
-<br />
+100000 cores. 
+<br /><br />
 
 <h1>Running large jobs</h1>
 <b>Is there special options for running large jobs ?</b>
 <br />
-Message routing should be enable for large jobs to lower the latency.
+Message routing can be enabled for large jobs to lower the latency in some cases.
 See Documentation/ to learn more.
 <br /><br />
 
-<h1>Cloud computing</h1>
+<h1>Cloud</h1>
 
 <b>Can I run Ray in the cloud, like on Amazon Elastic Compute Cloud (EC2) ?</b>
 <br />
@@ -110,7 +133,7 @@ Yes, you can do that. Strands must be like <----- -----> or
 
 <h1>Legal stuff</h1>
 
-<b>With which license Ray is distributed ?</b>
+<b>With which license is Ray distributed ?</b>
 <br />
 Ray is licensed with the GNU General Public License, version 3 (GPLv3).
 RayPlatform is licensed with the GNU Lesser General Public License, version 3 (LGPLv3).
