@@ -22,5 +22,8 @@ Mailing lists
 <ul>
 <li>
 <a href="http://seqanswers.com/forums/showthread.php?t=4301">View the SEQanswers thread</a></li>
+<li>
+<a href="http://seqanswers.com/forums/showthread.php?t=26278">View the SEQanswers thread for Ray Meta</li>
 </ul>
+
 
