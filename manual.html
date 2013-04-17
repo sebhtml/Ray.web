@@ -88,13 +88,16 @@ onclick="style.backgroundColor='#85ff85';window.location.href='wiki.html'"
 <h1>Manual
 </h1><br />
 <pre>
+
 NAME
        Ray - assemble genomes in parallel using the message-passing interface
 
 SYNOPSIS
-       mpiexec -n NUMBER_OF_RANKS Ray -k KMERLENGTH -p l1_1.fastq l1_2.fastq -p l2_1.fastq l2_2.fastq -o test
+       mpiexec -n 80 Ray -k 31 -p l1_1.fastq l1_2.fastq -p l2_1.fastq l2_2.fastq -o test
 
-       mpiexec -n NUMBER_OF_RANKS Ray Ray.conf # with commands in a file
+       mpiexec -n 80 Ray Ray.conf # with commands in a file
+
+       mpiexec -n 10 Ray -mini-ranks-per-rank 7 Ray.conf # with mini-ranks
 
 DESCRIPTION:
 
@@ -119,6 +122,19 @@ DESCRIPTION:
        -version
               Displays Ray version and compilation options.
 
+  Run Ray in pure MPI mode
+
+    mpiexec -n 80 Ray ...
+
+  Run Ray with mini-ranks on 10 machines, 8 cores / machine (MPI and IEEE POSIX threads)
+
+    mpiexec -n 10 Ray -mini-ranks-per-rank 7 ...
+
+  Run Ray on one core only (still needs MPI)
+
+    Ray ...
+
+
   Using a configuration file
 
     Ray can be launched with
@@ -130,7 +146,7 @@ DESCRIPTION:
        -k kmerLength
               Selects the length of k-mers. The default value is 21. 
               It must be odd because reverse-complement vertices are stored together.
-              The maximum length is defined at compilation by MAXKMERLENGTH
+              The maximum length is defined at compilation by CONFIG_MAXKMERLENGTH
               Larger k-mers utilise more memory.
 
   Inputs
@@ -163,6 +179,9 @@ DESCRIPTION:
               Sébastien Boisvert, Élénie Godzaridis, François Laviolette & Jacques Corbeil.
               First Annual RECOMB Satellite Workshop on Massively Parallel Sequencing, March 26-27 2011, Vancouver, BC, Canada.
 
+       -debug-recycling
+              Debug the recycling events
+
        -disable-scaffolder
               Disables the scaffolder.
 
@@ -185,7 +204,7 @@ DESCRIPTION:
 
        -bloom-filter-bits bits
               Sets the number of bits for the Bloom filter
-              Default is 268435456 bits, 0 bits disables the Bloom filter.
+              Default is auto bits (adaptive), 0 bits disables the Bloom filter.
 
        -hash-table-buckets buckets
               Sets the initial number of buckets. Must be a power of 2 !
@@ -305,12 +324,13 @@ DESCRIPTION:
        -connection-type type
               Sets the connection type for routes.
               Accepted values are debruijn, hypercube, polytope, group, random, kautz and complete. Default is debruijn.
-               debruijn: a full de Bruijn graph a given alphabet and diameter
-               hypercube: a hypercube, alphabet is {0,1} and the vertices is a power of 2
+               torus: a k-ary n-cube, radix: k, dimension: n, degree: 2*dimension, vertices: radix^dimension
                polytope: a convex regular polytope, alphabet is {0,1,...,B-1} and the vertices is a power of B
+               hypercube: a hypercube, alphabet is {0,1} and the vertices is a power of 2
+               debruijn: a full de Bruijn graph a given alphabet and diameter
+               kautz: a full de Kautz graph, which is a subgraph of a de Bruijn graph
                group: silly model where one representative per group can communicate with outsiders
                random: Erdős–Rényi model
-               kautz: a full de Kautz graph, which is a subgraph of a de Bruijn graph
                complete: a full graph with all the possible connections
               With the type debruijn, the number of ranks must be a power of something.
               Examples: 256 = 16*16, 512=8*8*8, 49=7*7, and so on.
@@ -381,6 +401,7 @@ FILES
      .fastq
      .fastq.gz (needs HAVE_LIBZ=y at compilation)
      .fastq.bz2 (needs HAVE_LIBBZ2=y at compilation)
+     export.txt
      .sff (paired reads must be extracted manually)
      .csfasta (color-space reads)
 
@@ -439,7 +460,7 @@ FILES
 
      RayOutput/LibraryStatistics.txt
      	Estimation of outer distances for paired reads
-     RayOutput/Library<LibraryNumber>.txt
+     RayOutput/LibraryData.xml
          Frequencies for observed outer distances (insert size + read lengths)
 
   Partition
@@ -463,8 +484,6 @@ FILES
 
   Communication
 
-     RayOutput/MessagePassingInterface.txt
-	    	Number of messages sent
      RayOutput/NetworkTest.txt
 	    	Latencies in microseconds
      RayOutput/Rank<rank>NetworkTestData.txt
@@ -498,7 +517,7 @@ COPYRIGHT
        You have received a copy of the GNU General Public License
        along with this program (see LICENSE).
 
-Ray 2.1.0
+Ray 2.2.0
 </pre>
 
 <br />
