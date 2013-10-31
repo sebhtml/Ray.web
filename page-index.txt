@@ -36,7 +36,7 @@ Ray -run-surveyor
 
 Related:
 <ul>
-<li><strong>Ray<sub>Cloud Browser</sub></strong> visualkization of genome graphs on the web<br />
+<li><strong>Ray<sub>Cloud Browser</sub></strong> visualization of genome graphs on the web<br />
 <a href="https://github.com/sebhtml/Ray-Cloud-Browser">code</a>
  <a href="http://genome.ulaval.ca:10090/client/?map=1&section=0&region=3158&location=0&depth=20">demo</a></li>
 </ul>
