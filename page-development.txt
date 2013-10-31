@@ -149,6 +149,9 @@ our work in <a href="http://genomebiology.com/2012/13/12/R122"><i>Genome Biology
 <a href="https://github.com/CharlesJB/RayCompare-prelim">RayCompare-prelim</a> was a protype in Python for comparing reference genomes (or assemblies)
 </li>
 
+<li>
+<a href="https://github.com/sebhtml/BioActors">BioActors</a> was a prototype for the actor model -- the ideas have been integrated in RayPlatform
+</li>
 
 </ul>
 
