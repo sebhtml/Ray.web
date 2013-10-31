@@ -22,9 +22,23 @@ and Jacques Corbeil.<br />
 Included:
 <ul>
 <li><strong>Ray</strong> <i>de novo</i> assembly of single genomes</li>
-<li class="BrandNew"><strong>Ray<sub>Méta</sub></strong>  <i>de novo</i> assembly of metagenomes</li>
-<li class="BrandNew"><strong>Ray<sub>Communities</sub></strong>  microbe abundance + taxonomic profiling</li>
-<li class="BrandNew"><strong>Ray<sub>Ontologies</sub></strong>  gene ontology profiling</li>
+<li ><strong>Ray<sub>Méta</sub></strong>  <i>de novo</i> assembly of metagenomes</li>
+<li ><strong>Ray<sub>Communities</sub></strong>  microbe abundance + taxonomic profiling</li>
+<li ><strong>Ray<sub>Ontologies</sub></strong>  gene ontology profiling</li>
+<li class="BandNew" > <strong>Ray<sub>Surveyor</sub></strong> compare genomic content between samples <br />
+Ray -run-surveyor 
+<a href="https://github.com/sebhtml/ray/blob/master/Documentation/Ray-Surveyor.md">documentation</a> <a href="https://github.com/sebhtml/ray/tree/master/code/Surveyor">code</a></li>
+</ul>
+
+<br />
+<br />
+<br />
+
+Related:
+<ul>
+<li><strong>Ray<sub>Cloud Browser</sub></strong> visualkization of genome graphs on the web<br />
+<a href="https://github.com/sebhtml/Ray-Cloud-Browser">code</a>
+ <a href="http://genome.ulaval.ca:10090/client/?map=1&section=0&region=3158&location=0&depth=20">demo</a></li>
 </ul>
 
 </div>

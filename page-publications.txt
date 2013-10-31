@@ -10,8 +10,10 @@ Publications
 and Jacques Corbeil.<br />
 <i>Genome Biology</i> (BioMed Central Ltd).<br />
 13:R122, Published: 22 December 2012<br />
-<a href="http://dx.doi.org/doi:10.1186/gb-2012-13-12-r122">doi:10.1186/gb-2012-13-12-r122</a>
-<a href="http://genomebiology.com/2012/13/12/R122/abstract">link</a><br />
+<a href="http://dx.doi.org/doi:10.1186/gb-2012-13-12-r122">doi:10.1186/gb-2012-13-12-r122</a> |
+<a href="http://scholar.google.ca/scholar?cites=1842333493877590617&as_sdt=2005&sciodt=0,5&hl=en">Citations in Google Scholar</a>
+
+<br />
 
 &nbsp;
 </li>
@@ -22,9 +24,12 @@ and Jacques Corbeil.<br />
 <span class="seb">Sébastien Boisvert</span>, François Laviolette, and Jacques Corbeil.<br />
 <i>Journal of Computational Biology</i> (Mary Ann Liebert, Inc. publishers).<br />
 November 2010, 17(11): 1519-1533.  <br />
-<a href="http://dx.doi.org/doi:10.1089/cmb.2009.0238">
-doi:10.1089/cmb.2009.0238</a><br />
+<a href="http://dx.doi.org/doi:10.1089/cmb.2009.0238"> 
+doi:10.1089/cmb.2009.0238</a> |
+<a href="http://scholar.google.ca/scholar?cites=16829156984601214227&as_sdt=2005&sciodt=0,5&hl=en">Citations in Google Scholar</a>
+
 &nbsp;
+<br />
 </li>
 
 </ul>
