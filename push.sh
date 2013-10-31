@@ -4,4 +4,4 @@
 
 rsync -avz * sebhtml,denovoassembler@web.sourceforge.net:htdocs
 
-
+git push origin master
