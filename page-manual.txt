@@ -2,7 +2,6 @@ Manual
 
 <pre>
 
-
 NAME
        Ray - assemble genomes in parallel using the message-passing interface
 
@@ -31,6 +30,8 @@ DESCRIPTION:
     - quantification of transcript expression
     - taxonomy profiling of samples (with Ray Communities)
     - gene ontology profiling of samples (with Ray Ontologies)
+
+    - compare DNA samples using words (Ray -run-surveyor ...; see Ray Surveyor options)
 
        -help
               Displays this help page.
@@ -90,6 +91,17 @@ DESCRIPTION:
               Specifies the directory for outputted files. Default is RayOutput
               Other name: -output
 
+  Ray Surveyor options
+
+       -run-surveyor
+              Runs Ray Surveyor to compare samples.
+              See Documentation/Ray-Surveyor.md
+              This workflow generates:
+              RayOutput/Surveyor/SimilarityMatrix.tsv is a similarity Gramian matrix based on shared DNA words
+              RayOutput/Surveyor/DistanceMatrix.tsv is a distance matrix (kernel-based).
+       -read-sample-graph SampleName SampleGraphFile
+              Reads a sample graph (generated with -write-kmers)
+
   Assembly options (defaults work well)
 
        -disable-recycling
@@ -113,6 +125,9 @@ DESCRIPTION:
 
        -disable-scaffolder
               Disables the scaffolder.
+
+       -minimum-seed-length minimumSeedLength
+              Changes the minimum seed length, default is 100 nucleotides
 
        -minimum-contig-length minimumContigLength
               Changes the minimum contig length, default is 100 nucleotides
@@ -189,6 +204,9 @@ DESCRIPTION:
               Writes k-mer graph to RayOutput/kmers.txt
               The resulting file is not utilised by Ray.
               The resulting file is very large.
+
+       -graph-only
+              Exits after building graph.
 
        -write-read-markers
               Writes read markers to disk.
@@ -465,6 +483,6 @@ COPYRIGHT
        You have received a copy of the GNU General Public License
        along with this program (see LICENSE).
 
-Ray 2.3.0
+Ray 2.3.1
 
 </pre>
